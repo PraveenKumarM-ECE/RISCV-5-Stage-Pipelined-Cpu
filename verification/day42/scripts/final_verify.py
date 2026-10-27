@@ -37,7 +37,29 @@ def extract(output, day, kind):
 def reference_run(day, program):
     exe = reference / f"tb_day{day}_auto"
     if not exe.exists():
-        raise FileNotFoundError(exe)
+        reference.mkdir(parents=True, exist_ok=True)
+
+        src = sorted(Path("rtl").glob("*.sv"))
+        src += sorted(Path("rtl/pipeline").glob("*.sv"))
+        tb = Path(f"tb/pipeline/tb_day{day}_auto.sv")
+
+        cmd = [
+            "iverilog", "-g2012",
+            "-s", f"tb_day{day}_auto",
+            "-o", str(exe),
+            *map(str, src),
+            str(tb)
+        ]
+
+        result = subprocess.run(
+            cmd, capture_output=True, text=True
+        )
+
+        if result.returncode != 0:
+            raise RuntimeError(
+                "Reference compilation failed:\n"
+                + result.stdout + result.stderr
+            )
 
     cmd = ["vvp", str(exe), f"+PROGRAM={program}"]
     if day == 29:
