@@ -1,0 +1,27 @@
+==============================================================================
+DAY 32 - MODULE RESOURCE ANALYSIS
+==============================================================================
+Module                                MUX         FF      Other
+data_memory                          8232       8192       1643
+register_file                        1984       1024        159
+alu                                   310          0       1151
+ex_stage                               96          0        454
+id_ex_reg                               0        196        197
+riscv_pipeline_cpu                     96          0        201
+immediate_generator                     0          0        234
+ex_mem_reg                              0        108        109
+mem_wb_reg                              0        104        105
+wb_stage                                0          0        202
+if_id_reg                               0         96         97
+program_counter                        30         32         82
+control_unit                            3          0         88
+id_stage                               64          0         26
+if_stage                                0          0         80
+forwarding_unit                         2          0         55
+hazard_detection_unit                   0          0         55
+mem_stage                               0          0          1
+instruction_decoder                     0          0          0
+instruction_memory                      0          0          0
+==============================================================================
+Counts are per module definition, not flattened instance totals.
+Only generic mapped cells are counted in these columns.

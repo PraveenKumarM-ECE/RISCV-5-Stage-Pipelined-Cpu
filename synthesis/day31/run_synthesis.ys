@@ -1,0 +1,42 @@
+# DAY 31 - RISC-V FIVE-STAGE CPU SYNTHESIS
+
+# Read all required RTL modules.
+read_verilog -sv synthesis/day31/src/program_counter.sv
+read_verilog -sv synthesis/day31/src/instruction_memory.sv
+read_verilog -sv synthesis/day31/src/instruction_decoder.sv
+read_verilog -sv synthesis/day31/src/immediate_generator.sv
+read_verilog -sv synthesis/day31/src/control_unit.sv
+read_verilog -sv synthesis/day31/src/register_file.sv
+read_verilog -sv synthesis/day31/src/alu.sv
+read_verilog -sv synthesis/day31/src/data_memory.sv
+
+read_verilog -sv synthesis/day31/src/if_stage.sv
+read_verilog -sv synthesis/day31/src/if_id_reg.sv
+read_verilog -sv synthesis/day31/src/id_stage.sv
+read_verilog -sv synthesis/day31/src/id_ex_reg.sv
+read_verilog -sv synthesis/day31/src/ex_stage.sv
+read_verilog -sv synthesis/day31/src/ex_mem_reg.sv
+read_verilog -sv synthesis/day31/src/mem_stage.sv
+read_verilog -sv synthesis/day31/src/mem_wb_reg.sv
+read_verilog -sv synthesis/day31/src/wb_stage.sv
+read_verilog -sv synthesis/day31/src/forwarding_unit.sv
+read_verilog -sv synthesis/day31/src/hazard_detection_unit.sv
+read_verilog -sv synthesis/day31/src/riscv_pipeline_cpu.sv
+
+# Check module hierarchy and top-level selection.
+hierarchy -check -top riscv_pipeline_cpu
+
+# Perform generic synthesis.
+synth -top riscv_pipeline_cpu
+
+# Select only the final top-level module.
+select -module riscv_pipeline_cpu
+
+# Report synthesized hardware resources.
+stat
+
+# Export the synthesized netlist.
+write_verilog -noattr synthesis/day31/netlist/riscv_pipeline_netlist.v
+
+# Export machine-readable hardware representation.
+write_json synthesis/day31/netlist/riscv_pipeline_netlist.json

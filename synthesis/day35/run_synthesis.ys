@@ -1,0 +1,34 @@
+read_verilog -sv synthesis/day35/src/alu.sv
+read_verilog -sv synthesis/day35/src/control_unit.sv
+read_verilog -sv synthesis/day35/src/data_memory.sv
+read_verilog -sv synthesis/day35/src/ex_mem_reg.sv
+read_verilog -sv synthesis/day35/src/ex_stage.sv
+read_verilog -sv synthesis/day35/src/forwarding_unit.sv
+read_verilog -sv synthesis/day35/src/hazard_detection_unit.sv
+read_verilog -sv synthesis/day35/src/id_ex_reg.sv
+read_verilog -sv synthesis/day35/src/id_stage.sv
+read_verilog -sv synthesis/day35/src/if_id_reg.sv
+read_verilog -sv synthesis/day35/src/if_stage.sv
+read_verilog -sv synthesis/day35/src/immediate_generator.sv
+read_verilog -sv synthesis/day35/src/instruction_decoder.sv
+read_verilog -sv synthesis/day35/src/instruction_memory.sv
+read_verilog -sv synthesis/day35/src/instruction_rom.sv
+read_verilog -sv synthesis/day35/src/mem_stage.sv
+read_verilog -sv synthesis/day35/src/mem_wb_reg.sv
+read_verilog -sv synthesis/day35/src/program_counter.sv
+read_verilog -sv synthesis/day35/src/register_file.sv
+read_verilog -sv synthesis/day35/src/riscv_cpu.sv
+read_verilog -sv synthesis/day35/src/riscv_pipeline_cpu.sv
+read_verilog -sv synthesis/day35/src/riscv_system.sv
+read_verilog -sv synthesis/day35/src/wb_stage.sv
+
+hierarchy -check -top riscv_pipeline_cpu
+
+synth -top riscv_pipeline_cpu
+
+check -assert
+
+stat
+
+write_verilog -noattr synthesis/day35/netlist/riscv_cpu_core.v
+write_json synthesis/day35/netlist/riscv_cpu_core.json

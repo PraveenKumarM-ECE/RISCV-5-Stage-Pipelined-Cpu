@@ -1,0 +1,15 @@
+read_verilog -sv synthesis/day36/rtl/data_memory_bram.sv
+
+hierarchy -check -top data_memory_bram
+
+proc
+opt
+
+memory_dff
+opt
+
+memory_collect
+
+stat
+
+write_json synthesis/day36/reports/memory_inference.json

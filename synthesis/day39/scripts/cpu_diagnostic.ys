@@ -1,0 +1,13 @@
+read_verilog -sv synthesis/day39/src/*.sv
+
+hierarchy -check -top riscv_pipeline_cpu
+
+proc
+opt
+memory_dff
+memory_collect
+opt
+
+stat
+
+write_json synthesis/day39/netlist/cpu_diagnostic.json

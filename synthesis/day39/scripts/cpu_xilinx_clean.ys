@@ -1,0 +1,28 @@
+read_verilog -sv \
+    synthesis/day39/src/alu.sv \
+    synthesis/day39/src/control_unit.sv \
+    synthesis/day39/src/data_memory.sv \
+    synthesis/day39/src/ex_mem_reg.sv \
+    synthesis/day39/src/ex_stage.sv \
+    synthesis/day39/src/forwarding_unit.sv \
+    synthesis/day39/src/hazard_detection_unit.sv \
+    synthesis/day39/src/id_ex_reg.sv \
+    synthesis/day39/src/id_stage.sv \
+    synthesis/day39/src/if_id_reg.sv \
+    synthesis/day39/src/if_stage.sv \
+    synthesis/day39/src/immediate_generator.sv \
+    synthesis/day39/src/instruction_decoder.sv \
+    synthesis/day39/src/mem_stage.sv \
+    synthesis/day39/src/mem_wb_reg.sv \
+    synthesis/day39/src/program_counter.sv \
+    synthesis/day39/src/register_file.sv \
+    synthesis/day39/src/riscv_pipeline_cpu.sv \
+    synthesis/day39/src/wb_stage.sv
+
+hierarchy -check -top riscv_pipeline_cpu
+
+synth_xilinx -family xc7 -top riscv_pipeline_cpu -noiopad
+
+stat
+
+write_json synthesis/day39/netlist/cpu_xilinx_clean.json

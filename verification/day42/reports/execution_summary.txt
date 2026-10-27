@@ -1,0 +1,36 @@
+day26_case1: EXECUTED
+day26_case2: EXECUTED
+day26_case3: EXECUTED
+day26_case4: EXECUTED
+day26_case5: EXECUTED
+day26_case6: EXECUTED
+day27_case1: EXECUTED
+day27_case2: EXECUTED
+day27_case3: EXECUTED
+day27_case4: EXECUTED
+day27_case5: EXECUTED
+day27_case6: EXECUTED
+day28_2800: EXECUTED
+day28_2801: EXECUTED
+day28_2802: EXECUTED
+day28_2803: EXECUTED
+day28_2804: EXECUTED
+day28_2805: EXECUTED
+day28_2806: EXECUTED
+day28_2807: EXECUTED
+day28_2808: EXECUTED
+day28_2809: EXECUTED
+day29_branch_compare: EXECUTED
+day29_byte_memory: EXECUTED
+day29_half_memory: EXECUTED
+day29_jumps_flush: EXECUTED
+day29_load_branch_loop: EXECUTED
+day29_word_loads: EXECUTED
+day30_independent: EXECUTED
+day30_dependent: EXECUTED
+day30_load_use: EXECUTED
+day30_branches: EXECUTED
+
+TOTAL PROGRAMS: 32
+EXECUTED WITHOUT DETECTED ERRORS: 32
+FAILED OR NOT EXECUTED: 0

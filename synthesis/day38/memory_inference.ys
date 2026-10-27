@@ -1,0 +1,12 @@
+read_verilog -sv synthesis/day38/src/data_memory.sv
+
+hierarchy -check -top data_memory
+
+proc
+opt
+memory_dff
+opt
+memory_collect
+stat
+
+write_json synthesis/day38/reports/memory_inference.json

@@ -1,0 +1,221 @@
+=======================================================
+DAY 31 - RISC-V CPU SYNTHESIS RESOURCE REPORT
+=======================================================
+Total module definitions: 20
+
+Module: alu
+Direct cells: 1461
+  $_ANDNOT_                 585
+  $_MUX_                    310
+  $_OR_                     228
+  $_NAND_                   64
+  $_ORNOT_                  63
+  $_XOR_                    62
+  $_AND_                    57
+  $_XNOR_                   33
+
+Module: control_unit
+Direct cells: 91
+  $_OR_                     33
+  $_ANDNOT_                 31
+  $_ORNOT_                  9
+  $_NAND_                   5
+  $_NOR_                    4
+  $_AND_                    3
+  $_NOT_                    3
+  $_MUX_                    3
+
+Module: data_memory
+Direct cells: 18067
+  $_MUX_                    8232
+  $_DFFE_PP_                8192
+  $_ANDNOT_                 979
+  $_OR_                     347
+  $_NOR_                    259
+  $_NAND_                   24
+  $_ORNOT_                  16
+  $_NOT_                    12
+
+Module: ex_mem_reg
+Direct cells: 217
+  $_ANDNOT_                 108
+  $_DFFE_PP0P_              108
+  $_ORNOT_                  1
+
+Module: ex_stage
+Direct cells: 551
+  $_ANDNOT_                 179
+  $_MUX_                    96
+  $_XNOR_                   59
+  $_OR_                     50
+  $_ORNOT_                  44
+  $_XOR_                    37
+  $_NOR_                    33
+  $_NAND_                   29
+
+Module: forwarding_unit
+Direct cells: 57
+  $_XOR_                    18
+  $_OR_                     14
+  $_ANDNOT_                 14
+  $_ORNOT_                  3
+  $_NOR_                    2
+  $_XNOR_                   2
+  $_AND_                    2
+  $_MUX_                    2
+
+Module: hazard_detection_unit
+Direct cells: 55
+  $_OR_                     20
+  $_ANDNOT_                 13
+  $_XOR_                    10
+  $_ORNOT_                  6
+  $_NOR_                    3
+  $_NAND_                   2
+  $_AND_                    1
+
+Module: id_ex_reg
+Direct cells: 393
+  $_ANDNOT_                 196
+  $_DFFE_PP0P_              196
+  $_ORNOT_                  1
+
+Module: id_stage
+Direct cells: 94
+  $_MUX_                    64
+  $_XOR_                    10
+  $_OR_                     9
+  $_ANDNOT_                 4
+  $_NOR_                    2
+  $_NAND_                   1
+  control_unit              1
+  instruction_decoder       1
+
+Module: if_id_reg
+Direct cells: 193
+  $_ANDNOT_                 93
+  $_DFFE_PP0P_              93
+  $_OR_                     3
+  $_DFFE_PP1P_              3
+  $_ORNOT_                  1
+
+Module: if_stage
+Direct cells: 82
+  $_OR_                     21
+  $_XOR_                    15
+  $_NAND_                   14
+  $_XNOR_                   14
+  $_ANDNOT_                 14
+  $_NOT_                    2
+  instruction_memory        1
+  program_counter           1
+
+Module: immediate_generator
+Direct cells: 234
+  $_ANDNOT_                 142
+  $_OR_                     61
+  $_ORNOT_                  20
+  $_NAND_                   6
+  $_NOR_                    3
+  $_AND_                    2
+
+Module: instruction_decoder
+Direct cells: 0
+
+Module: instruction_memory
+Direct cells: 0
+
+Module: mem_stage
+Direct cells: 2
+  $_ANDNOT_                 1
+  data_memory               1
+
+Module: mem_wb_reg
+Direct cells: 209
+  $_ANDNOT_                 104
+  $_DFFE_PP0P_              104
+  $_ORNOT_                  1
+
+Module: program_counter
+Direct cells: 144
+  $_DFFE_PP0P_              32
+  $_MUX_                    30
+  $_OR_                     21
+  $_XOR_                    15
+  $_NAND_                   14
+  $_XNOR_                   14
+  $_ANDNOT_                 14
+  $_AND_                    3
+
+Module: register_file
+Direct cells: 3167
+  $_MUX_                    1984
+  $_DFFE_PP_                1024
+  $_ANDNOT_                 99
+  $_OR_                     48
+  $_ORNOT_                  4
+  $_NOT_                    3
+  $_NOR_                    2
+  $_NAND_                   2
+
+Module: riscv_pipeline_cpu
+Direct cells: 308
+  $_ANDNOT_                 100
+  $_MUX_                    96
+  $_OR_                     65
+  $_AND_                    33
+  $_ORNOT_                  3
+  forwarding_unit           1
+  hazard_detection_unit     1
+  ex_mem_reg                1
+
+Module: wb_stage
+Direct cells: 202
+  $_ANDNOT_                 162
+  $_ORNOT_                  33
+  $_OR_                     4
+  $_NOR_                    2
+  $_NAND_                   1
+
+=======================================================
+CELL TYPES ACROSS MODULE DEFINITIONS
+=======================================================
+$_MUX_                         10817
+$_DFFE_PP_                     9216
+$_ANDNOT_                      2838
+$_OR_                          924
+$_DFFE_PP0P_                   533
+$_NOR_                         341
+$_ORNOT_                       205
+$_XOR_                         167
+$_NAND_                        162
+$_AND_                         130
+$_XNOR_                        122
+$_NOT_                         50
+$_DFFE_PP1P_                   3
+alu                            1
+control_unit                   1
+instruction_decoder            1
+immediate_generator            1
+register_file                  1
+instruction_memory             1
+program_counter                1
+data_memory                    1
+forwarding_unit                1
+hazard_detection_unit          1
+ex_mem_reg                     1
+id_ex_reg                      1
+if_id_reg                      1
+mem_wb_reg                     1
+ex_stage                       1
+id_stage                       1
+if_stage                       1
+mem_stage                      1
+wb_stage                       1
+
+NOTE:
+These are generic synthesized cell counts.
+They are not FPGA LUT or physical flip-flop counts.
+Hierarchical module reuse is not expanded in these totals.
+
+DAY 31 RESOURCE REPORT GENERATED

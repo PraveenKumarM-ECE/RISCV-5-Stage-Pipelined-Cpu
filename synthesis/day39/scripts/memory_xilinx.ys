@@ -1,0 +1,9 @@
+read_verilog -sv synthesis/day39/src/data_memory.sv
+
+hierarchy -check -top data_memory
+
+synth_xilinx -family xc7 -top data_memory -noiopad
+
+stat
+
+write_json synthesis/day39/netlist/data_memory_xilinx.json

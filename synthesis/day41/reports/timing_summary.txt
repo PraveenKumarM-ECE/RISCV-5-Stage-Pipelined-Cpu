@@ -1,0 +1,37 @@
+DAY 41 - FPGA TIMING ANALYSIS
+
+PROJECT:
+32-bit RV32I 5-stage pipelined RISC-V CPU
+
+SYNTHESIS:
+Yosys 0.52
+Target architecture: Xilinx 7-series
+
+CLOCK:
+Clock signal: clk
+Target frequency: 100 MHz
+Target period: 10 ns
+
+FPGA RESOURCES:
+LUTs: 1827
+Flip-flops: 509
+CARRY4: 60
+RAMB18E1: 1
+RAM32M: 12
+
+AVAILABLE TOOLS:
+Yosys
+Icarus Verilog
+Verilator
+
+UNAVAILABLE TOOLS:
+Vivado
+nextpnr-xilinx
+
+TIMING STATUS:
+100 MHz is a design target, not a verified frequency.
+
+Physical timing analysis has not been performed.
+Maximum operating frequency is not yet known.
+Place-and-route timing requires a specific FPGA device
+and a compatible implementation tool.

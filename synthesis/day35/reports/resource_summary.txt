@@ -1,0 +1,34 @@
+============================================================
+DAY 35 - RISC-V CPU SYNTHESIS RESOURCE REPORT
+============================================================
+Top module: riscv_pipeline_cpu
+Module definitions: 19
+
+HIERARCHY-EXPANDED CELL COUNTS
+Multiplexers: 10817
+Flip-flops: 9752
+Other logic gates: 4939
+Other cells: 0
+Total cells: 25508
+
+TOP 15 CELL TYPES
+$_MUX_                          10817
+$_DFFE_PP_                       9216
+$_ANDNOT_                        2585
+$_OR_                             923
+$_NOR_                            596
+$_DFFE_PP0P_                      533
+$_ORNOT_                          205
+$_XOR_                            167
+$_NAND_                           162
+$_AND_                            129
+$_XNOR_                           122
+$_NOT_                             50
+$_DFFE_PP1P_                        3
+
+NOTE:
+Counts include instantiated module occurrences.
+These are generic Yosys cells, not FPGA LUTs.
+External instruction ROM is excluded.
+
+DAY 35 RESOURCE ANALYSIS COMPLETED

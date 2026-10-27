@@ -1,0 +1,31 @@
+=================================================================
+DAY 32 - MEMORY INFERENCE REPORT
+=================================================================
+
+Module: data_memory
+Memory cell: memory
+Cell type: $mem_v2
+Width: 32 bits
+Depth: 256 words
+Read ports: 1
+Write ports: 7
+
+Module: instruction_memory
+Memory cell: memory
+Cell type: $mem_v2
+Width: 32 bits
+Depth: 256 words
+Read ports: 1
+Write ports: 0
+
+Module: register_file
+Memory cell: regs
+Cell type: $mem_v2
+Width: 32 bits
+Depth: 32 words
+Read ports: 2
+Write ports: 1
+
+=================================================================
+Memory cells found: 3
+Memory inference inspection completed.

@@ -1,0 +1,31 @@
+read_verilog -sv synthesis/day32/src/program_counter.sv
+read_verilog -sv synthesis/day32/src/instruction_memory.sv
+read_verilog -sv synthesis/day32/src/instruction_decoder.sv
+read_verilog -sv synthesis/day32/src/immediate_generator.sv
+read_verilog -sv synthesis/day32/src/control_unit.sv
+read_verilog -sv synthesis/day32/src/register_file.sv
+read_verilog -sv synthesis/day32/src/alu.sv
+read_verilog -sv synthesis/day32/src/data_memory.sv
+read_verilog -sv synthesis/day32/src/if_stage.sv
+read_verilog -sv synthesis/day32/src/if_id_reg.sv
+read_verilog -sv synthesis/day32/src/id_stage.sv
+read_verilog -sv synthesis/day32/src/id_ex_reg.sv
+read_verilog -sv synthesis/day32/src/ex_stage.sv
+read_verilog -sv synthesis/day32/src/ex_mem_reg.sv
+read_verilog -sv synthesis/day32/src/mem_stage.sv
+read_verilog -sv synthesis/day32/src/mem_wb_reg.sv
+read_verilog -sv synthesis/day32/src/wb_stage.sv
+read_verilog -sv synthesis/day32/src/forwarding_unit.sv
+read_verilog -sv synthesis/day32/src/hazard_detection_unit.sv
+read_verilog -sv synthesis/day32/src/riscv_pipeline_cpu.sv
+
+hierarchy -check -top riscv_pipeline_cpu
+
+proc
+opt
+memory_dff
+memory_collect
+
+stat
+
+write_json synthesis/day32/netlist/memory_inference.json

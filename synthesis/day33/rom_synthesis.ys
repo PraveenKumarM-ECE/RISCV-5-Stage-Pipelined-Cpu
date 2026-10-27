@@ -1,0 +1,11 @@
+read_verilog -sv synthesis/day33/rtl/instruction_rom.sv
+
+hierarchy -check -top instruction_rom
+
+proc
+opt
+memory_collect
+
+stat
+
+write_json synthesis/day33/reports/rom_memory.json

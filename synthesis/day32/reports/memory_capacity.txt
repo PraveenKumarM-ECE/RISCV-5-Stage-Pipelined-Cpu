@@ -1,0 +1,26 @@
+=======================================================
+DAY 32 - RISC-V CPU MEMORY CAPACITY
+=======================================================
+
+Instruction memory
+  Words      : 256
+  Word width : 32 bits
+  Capacity   : 8192 bits
+  Capacity   : 1024 bytes
+
+Data memory
+  Words      : 256
+  Word width : 32 bits
+  Capacity   : 8192 bits
+  Capacity   : 1024 bytes
+
+Register file
+  Words      : 32
+  Word width : 32 bits
+  Capacity   : 1024 bits
+  Capacity   : 128 bytes
+
+=======================================================
+Total logical storage: 17,408 bits
+Total logical storage: 2.12 KiB
+=======================================================

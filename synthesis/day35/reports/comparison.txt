@@ -1,0 +1,11 @@
+============================================================
+DAY 31 VS DAY 35 SYNTHESIS COMPARISON
+============================================================
+Resource                     Day 31       Day 35
+Multiplexers                  10817        10817
+Flip-flops                     9752         9752
+Total cells                   25508        25508
+
+Day 31: CPU with fixed NOP instruction ROM
+Day 35: CPU with external instruction input
+Counts are generic cells, not FPGA resources.

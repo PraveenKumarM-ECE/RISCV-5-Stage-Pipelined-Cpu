@@ -1,0 +1,9 @@
+read_verilog -sv synthesis/day41/src/*.sv
+
+hierarchy -check -top riscv_pipeline_cpu
+
+synth -top riscv_pipeline_cpu
+
+stat
+
+ltp -noff

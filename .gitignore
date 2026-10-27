@@ -1,0 +1,62 @@
+# Simulation waveforms
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+*.vpd
+
+# Simulation executables
+*.vvp
+*.out
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Generated simulation executables
+sim/pipeline/*.out
+synthesis/*/sim/
+synthesis/*/reference/
+verification/*/sim/
+
+# Generated synthesis netlists
+synthesis/*/netlist/
+
+# Large generated logs
+*.log
+
+# Local editor settings
+.vscode/
+.idea/
+
+# Historical development snapshots
+checkpoints/
+
+# Icarus Verilog compiled simulation binaries
+/sim/*
+!/sim/pipeline/
+!/sim/pipeline/run_day26.sh
+!/sim/pipeline/run_day27.sh
+
+/sim/pipeline/*
+!/sim/pipeline/.gitkeep
+!/sim/pipeline/*.sh
+
+# Historical RTL backup files
+*.sv.bak
+
+# Generated synthesis binaries
+/synthesis/day35/cpu_check
+
+# Generated synthesis JSON reports
+/synthesis/*/reports/*.json
+
+# Local simulation binaries without extensions
+/synthesis/*/cpu_check
